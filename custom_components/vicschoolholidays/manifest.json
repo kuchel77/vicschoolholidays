@@ -1,0 +1,10 @@
+{
+    "domain": "vicschoolholidays",
+    "name": "Victorian School Holidays",
+    "documentation": "https://github.com/kuchel77/vicschoolholidays/",
+    "requirements": [],
+    "codeowners": ["@kuchel77"],
+    "quality_scale": "internal",
+    "iot_class": "local_polling",
+    "version": "0.1.0"
+}

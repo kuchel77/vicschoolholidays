@@ -1,0 +1,1 @@
+"""Sensor to indicate whether the current day is a part of the Victorian School Holidays."""
