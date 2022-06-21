@@ -76,18 +76,14 @@ class IsSchoolHolidaySensor(BinarySensorEntity):
     def is_school_holidays(self, now: date) -> bool:
         """Check if given day is in the includes list."""
         for dates in self._obj_holidays:
-            if now >= dt.parse_datetime(dates["start"]).astimezone(datetime.timezone.utc) and now <= dt.parse_datetime(dates["end"]).astimezone(datetime.timezone.utc):
+            if now >= dt.parse_datetime(dates["start"]).astimezone() and now <= dt.parse_datetime(dates["end"]).astimezone():
                 return True
         
         return False
 
-
     async def async_update(self) -> None:
         """Get date and look whether it is a holiday."""
         self._attr_is_on = False
-
-        adjusted_date = get_date(dt.now()) + timedelta(days=self._days_offset)
-
+        adjusted_date = dt.now() + timedelta(days=int(self._days_offset))
         if self.is_school_holidays(adjusted_date):
             self._attr_is_on = True
-
