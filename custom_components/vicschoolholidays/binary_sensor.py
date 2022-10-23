@@ -44,7 +44,7 @@ def setup_platform(
     sensor_name: str = config[CONF_NAME]
 
     #Load holidays here
-    obj_holidays = [{ "start": "2022-06-25", "end":"2022-07-10" }, { "start":"2022-09-17","end":"2022-10-02" }]
+    obj_holidays = [{ "start": "2022-06-25", "end":"2022-07-10" }, { "start":"2022-09-17","end":"2022-10-02" }, { "start":"2022-12-12", "end":"2023-01-29"}]
 
     add_entities(
         [IsSchoolHolidaySensor(obj_holidays, days_offset, sensor_name)],
