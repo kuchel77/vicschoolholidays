@@ -20,7 +20,7 @@ from homeassistant.util import dt
 
 _LOGGER = logging.getLogger(__name__)
 
-DEFAULT_NAME = "School Holidays Sensor"
+DEFAULT_NAME = "Date Range Binary Sensor"
 DEFAULT_OFFSET = 0
 
 CONF_OFFSET = "days_offset"
@@ -39,7 +39,7 @@ def setup_platform(
     add_entities: AddEntitiesCallback,
     discovery_info: DiscoveryInfoType | None = None,
 ) -> None:
-    """Set up the Workday sensor."""
+    """Set up the daterange sensor."""
     days_offset: int = config[CONF_OFFSET]
     sensor_name: str = config[CONF_NAME]
 
