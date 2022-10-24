@@ -1,7 +1,7 @@
 {
-    "domain": "vicschoolholidays",
-    "name": "Victorian School Holidays",
-    "documentation": "https://github.com/kuchel77/vicschoolholidays/",
+    "domain": "daterange",
+    "name": "daterange",
+    "documentation": "https://github.com/kuchel77/daterange/",
     "requirements": [],
     "codeowners": ["@kuchel77"],
     "quality_scale": "internal",
